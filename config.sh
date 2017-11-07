@@ -10,7 +10,7 @@ locale-gen
 echo LANG=zh_CN.UTF-8 > /etc/locale.conf
 read -p "Input your hostname:  " HOSTNAME
 echo $HOSTNAME  > /etc/hostname
-echo Change your root passwd
+echo Setting your root password:
 passwd
 
 ## 安装引导
