@@ -5,7 +5,7 @@ read -p "Do you want to adjust the partition ? (Input y to use fdisk or Enter to
 if [ "$TMP" == y ] 
 then
   fdisk -l
-  read -p "Which disk do you want to partition ? (/dev/sdX:  " DISK
+  read -p "Which disk do you want to partition ? (example: /dev/sdX:  " DISK
   fdisk $DISK
 fi
 fdisk -l
@@ -13,7 +13,7 @@ read -p "Input the root mount point:  " ROOT
 read -p "Format it ? (y or Enter  " TMP
 if [ "$TMP" == y ] 
 then 
-  read -p "Input y to use ext4 or defalut to use btrfs  " TMP
+  read -p "Input y to use EXT4 or defalut to use BTRFS  " TMP
   if [ "$TMP" == y ]
   then mkfs.ext4 $ROOT
   else mkfs.btrfs $ROOT -f
@@ -34,7 +34,7 @@ then
   mount $BOOT /mnt/boot
 fi
 
-read -p "Do you have the swap partition ? (y or Enter  " SWAP
+read -p "Do you need the swap partition ? (y or Enter  " SWAP
 if [ "$SWAP" == y ] 
 then 
   fdisk -l

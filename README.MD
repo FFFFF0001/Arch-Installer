@@ -5,7 +5,7 @@
 进入Live并联网后，输入
 
 ```
-wget https://raw.githubusercontent.com/rhatyang/Arch-Installer/master/live.sh
+wget https://raw.githubusercontent.com/rhatyang/Arch-Installer/master/install.sh
 sh live.sh
 ```
 
